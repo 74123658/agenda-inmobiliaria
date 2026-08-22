@@ -1,0 +1,6 @@
+{
+  "name": "Agenda Inmobiliaria 360",
+  "description": "CRM inmobiliario con sistema tri-color (verde, amarillo, rojo), chatbot interactivo para agendar citas y llamadas, alarmas con sonido, Smart Matcher y WhatsApp directo.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
