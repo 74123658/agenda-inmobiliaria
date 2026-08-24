@@ -116,7 +116,7 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
         {
           id: 'msg-1',
           sender: 'bot',
-          text: '¡Hola! 👋 Bienvenido a la Asesoría Inmobiliaria 360 (WhatsApp: 775 128 0009). Soy tu asistente virtual.\n\nDetecto que buscas una propiedad. ¿Qué tipo de inmueble te interesa?',
+          text: '¡Hola! 👋 Bienvenido a la Asesoría Inmobiliaria del Ing. Ramírez (WhatsApp: 775 128 0009). Soy su asistente virtual inteligente.\n\nDetecto que busca una propiedad. ¿Qué tipo de inmueble le interesa?',
           time: nowTime,
           options: [
             { label: '🏡 Casa con jardín', value: 'casa', action: 'step_zone' },
@@ -131,7 +131,7 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
         {
           id: 'msg-1',
           sender: 'bot',
-          text: '¡Hola estimado propietario! 🏠 Con gusto te ayudamos a vender o rentar tu inmueble con máxima seguridad y rapidez.\n\n¿Qué tipo de propiedad deseas que promovamos?',
+          text: '¡Hola estimado propietario! 🏠 En el despacho del Ing. Ramírez le ayudamos a vender o rentar su inmueble con máxima seguridad, respaldo legal y rapidez.\n\n¿Qué tipo de propiedad desea que promovamos?',
           time: nowTime,
           options: [
             { label: 'Vender Casa / Depto', value: 'vender_casa', action: 'owner_zone' },
@@ -152,12 +152,12 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
         {
           id: 'msg-1',
           sender: 'bot',
-          text: `🔔 *RECORDATORIO AUTOMÁTICO DE CITA*\n\nHola ${targetApt.leadName}, te recordamos tu cita programada:\n\n📅 Fecha: *${targetApt.date}*\n⏰ Hora: *${targetApt.time}*\n📌 Asunto: *${targetApt.title}*\n\n¿Nos confirmas tu asistencia?`,
+          text: `🔔 *RECORDATORIO AUTOMÁTICO DE CITA*\n\nHola ${targetApt.leadName}, el Ing. Ramírez le recuerda su cita programada:\n\n📅 Fecha: *${targetApt.date}*\n⏰ Hora: *${targetApt.time}*\n📌 Asunto: *${targetApt.title}*\n\n¿Nos confirma su asistencia con el Ing. Ramírez?`,
           time: nowTime,
           options: [
             { label: '✅ Sí, confirmadísimo', value: 'confirmar', action: 'reminder_confirm' },
             { label: '⏰ Reagendar horario', value: 'reagendar', action: 'reminder_reschedule' },
-            { label: '📞 Deseo que me llamen antes', value: 'llamar', action: 'reminder_call' },
+            { label: '📞 Deseo llamada previa', value: 'llamar', action: 'reminder_call' },
           ],
         },
       ];
@@ -167,13 +167,13 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
         {
           id: 'msg-1',
           sender: 'bot',
-          text: '¡Hola! 🤖 Soy tu asesor inteligente de preguntas frecuentes. ¿Qué duda te gustaría resolver?',
+          text: '¡Hola! 🤖 Soy el asistente inteligente del Ing. Ramírez. ¿Qué consulta o duda le gustaría resolver en este momento?',
           time: nowTime,
           options: [
             { label: '¿Qué gastos notariales debo prever?', value: 'notaria', action: 'faq_ans' },
             { label: '¿Aceptan crédito Infonavit o Bancario?', value: 'credito', action: 'faq_ans' },
-            { label: '¿Cuánto cobran de comisión por vender?', value: 'comision', action: 'faq_ans' },
-            { label: 'Agendar llamada con asesor humano', value: 'humano', action: 'schedule_human' },
+            { label: '¿Cuánto cobra el Ing. Ramírez de comisión?', value: 'comision', action: 'faq_ans' },
+            { label: 'Agendar llamada con el Ing. Ramírez', value: 'humano', action: 'schedule_human' },
           ],
         },
       ];
@@ -269,12 +269,12 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
         {
           id: `bot-${Date.now()}`,
           sender: 'bot',
-          text: '¡Listo! Para presentarte 3 opciones que coinciden al 100% y coordinar una visita sin compromiso, ¿qué modalidad de atención prefieres?',
+          text: '¡Listo! Para presentarle las 3 opciones verificadas por el Ing. Ramírez y coordinar una atención personalizada sin compromiso, ¿qué modalidad prefiere?',
           time: nowTime,
           options: [
-            { label: '📞 Llamada de 10 min (Hoy 5:00 PM)', value: 'llamada_hoy', action: 'finalize_buyer_apt', aptData: { type: 'llamada', time: '17:00' } },
-            { label: '🏠 Visita al Inmueble (Mañana 11:00 AM)', value: 'visita_manana', action: 'finalize_buyer_apt', aptData: { type: 'cita_visita', time: '11:00' } },
-            { label: '💬 Ficha técnica por WhatsApp (7751280009)', value: 'whatsapp_direct', action: 'finalize_buyer_apt', aptData: { type: 'seguimiento', time: '12:00' } },
+            { label: '📞 Llamada con el Ing. Ramírez (Hoy 5:00 PM)', value: 'llamada_hoy', action: 'finalize_buyer_apt', aptData: { type: 'llamada', time: '17:00' } },
+            { label: '🏠 Visita al Inmueble con el Ing. Ramírez', value: 'visita_manana', action: 'finalize_buyer_apt', aptData: { type: 'cita_visita', time: '11:00' } },
+            { label: '💬 Ficha por WhatsApp del Ing. Ramírez (7751280009)', value: 'whatsapp_direct', action: 'finalize_buyer_apt', aptData: { type: 'seguimiento', time: '12:00' } },
           ],
         },
       ]);
@@ -291,11 +291,11 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
         leadPhone: clientPhone,
         leadType: 'prospecto',
         type: aptType,
-        title: aptType === 'cita_visita' ? 'Visita Guiada Inmueble' : 'Llamada de Calificación & Fichas',
+        title: aptType === 'cita_visita' ? 'Visita Guiada con Ing. Ramírez' : 'Llamada de Calificación con Ing. Ramírez',
         date: new Date().toISOString().split('T')[0],
         time: scheduledTime,
         propertyTitle: 'Propiedad Seleccionada por Chatbot',
-        notes: `Generado automáticamente por Chatbot. Presupuesto estimado $4.5M en ${targetZone}.`,
+        notes: `Generado automáticamente por Chatbot para el Ing. Ramírez. Presupuesto estimado $4.5M en ${targetZone}.`,
         status: 'confirmada',
         alarmEnabled: true,
         alarmSound: 'campana',
@@ -317,7 +317,7 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
         nextActionDate: new Date().toISOString().split('T')[0],
         nextActionNote: `Atender ${aptType} a las ${scheduledTime} hrs pactada en Chatbot`,
         lastContactDate: new Date().toISOString(),
-        notes: 'Lead captado y calificado automáticamente por el asistente conversacional.',
+        notes: 'Lead captado y calificado automáticamente para el Ing. Ramírez.',
       });
 
       soundEngine.playSuccess();
@@ -327,7 +327,7 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
         {
           id: `bot-${Date.now()}`,
           sender: 'bot',
-          text: `🎉 *¡CITA AGENDADA CON ÉXITO!* 🎉\n\n✅ Se ha registrado en tu Agenda Inmobiliaria con semáforo 🟢 *VERDE*.\n🔔 *Alarma Sonora Activada* con sonido de campana 15 min antes.\n📲 Notificación enviada al WhatsApp *${clientPhone}*.`,
+          text: `🎉 *¡CITA AGENDADA CON ÉXITO!* 🎉\n\nEstimado *ING. RAMÍREZ*, se ha registrado en su Agenda Inmobiliaria con semáforo 🟢 *VERDE*.\n🔔 *Alarma Sonora Activada* con sonido de campana 15 min antes.\n📲 Notificación enviada al WhatsApp *${clientPhone}*.`,
           time: nowTime,
           isCompleteCard: true,
           cardData: {
@@ -347,7 +347,7 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
         {
           id: `bot-${Date.now()}`,
           sender: 'bot',
-          text: 'Excelente. Para darte una estimación de precio de mercado y coordinar la sesión fotográfica del inmueble, ¿en qué zona se ubica tu propiedad?',
+          text: 'Excelente. Para que el Ing. Ramírez elabore su estudio de valor comercial y coordine la sesión fotográfica del inmueble, ¿en qué zona se ubica su propiedad?',
           time: nowTime,
           options: [
             { label: '📍 Del Valle / Nápoles', value: 'Del Valle', action: 'owner_schedule' },
@@ -366,11 +366,11 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
         leadPhone: ownerPhone,
         leadType: 'dueno',
         type: 'cita_visita',
-        title: 'Visita de Captación, Fotos & Valuación',
+        title: 'Visita de Captación & Valuación con Ing. Ramírez',
         date: new Date().toISOString().split('T')[0],
         time: '18:00',
         propertyTitle: `Inmueble en ${value} para Promoción`,
-        notes: 'Propietario listo para revisión de documentos y firma de autorización.',
+        notes: 'Propietario listo para revisión de documentos con el Ing. Ramírez.',
         status: 'confirmada',
         alarmEnabled: true,
         alarmSound: 'marimba',
@@ -391,9 +391,9 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
         estimatedCommission: 260000,
         status: 'amarillo',
         nextActionDate: new Date().toISOString().split('T')[0],
-        nextActionNote: 'Visita de captación a las 6:00 PM',
+        nextActionNote: 'Visita de captación a las 6:00 PM con Ing. Ramírez',
         lastContactDate: new Date().toISOString(),
-        notes: 'Captado por Chatbot de Propietarios.',
+        notes: 'Captado por Chatbot de Propietarios para el Ing. Ramírez.',
       });
 
       soundEngine.playSuccess();
@@ -403,7 +403,7 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
         {
           id: `bot-${Date.now()}`,
           sender: 'bot',
-          text: `🏠 *¡VISITA DE CAPTACIÓN REGISTRADA!* 🏠\n\nSe programó la visita para hoy a las 6:00 PM con ${ownerName}.\n🔔 *Alarma Sonora y Recordatorio Activados*.\n📊 Se añadió a tu Agenda con comisión potencial estimada.`,
+          text: `🏠 *¡VISITA DE CAPTACIÓN REGISTRADA!* 🏠\n\nEstimado *ING. RAMÍREZ*, se programó la visita para hoy a las 6:00 PM con ${ownerName}.\n🔔 *Alarma Sonora y Recordatorio Activados*.\n📊 Se añadió a su Agenda con comisión potencial estimada de $260,000 MXN.`,
           time: nowTime,
           isCompleteCard: true,
           cardData: {
@@ -424,7 +424,7 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
         {
           id: `bot-${Date.now()}`,
           sender: 'bot',
-          text: '✨ *¡Cita Confirmada por el Cliente!* ✨\n\nEl prospecto ha respondido confirmando que asistirá puntualmente. El estatus de la cita se actualizó a *Confirmada* y la alarma sonará en tu dispositivo en el horario programado.',
+          text: '✨ *¡Cita Confirmada por el Cliente!* ✨\n\nEstimado *ING. RAMÍREZ*, el cliente ha confirmado su asistencia puntual. La cita se actualizó a *Confirmada* y la alarma sonará en su dispositivo en el horario programado.',
           time: nowTime,
         },
       ]);
@@ -434,7 +434,7 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
         {
           id: `bot-${Date.now()}`,
           sender: 'bot',
-          text: 'Entendido. Te comparto los nuevos horarios disponibles del asesor:\n\n1️⃣ Mañana 10:30 AM\n2️⃣ Mañana 4:30 PM\n3️⃣ Sábado 11:00 AM\n\n¿Cuál se acomoda mejor a tu agenda?',
+          text: 'Entendido. Le comparto los horarios disponibles en la agenda del Ing. Ramírez:\n\n1️⃣ Mañana 10:30 AM\n2️⃣ Mañana 4:30 PM\n3️⃣ Sábado 11:00 AM\n\n¿Cuál se acomoda mejor a su horario?',
           time: nowTime,
           options: [
             { label: 'Mañana 10:30 AM', value: 'manana_1030', action: 'reminder_confirm' },
@@ -450,18 +450,18 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
         {
           id: `bot-${Date.now()}`,
           sender: 'bot',
-          text: '🚨 *SOLICITUD DE LLAMADA INMEDIATA*\n\nEl cliente solicita una llamada previa de 3 minutos antes de acudir. Te recomendamos marcarle directamente al número registrado.',
+          text: '🚨 *SOLICITUD DE LLAMADA INMEDIATA*\n\nEstimado *ING. RAMÍREZ*, el cliente solicita una llamada previa de 3 minutos antes de acudir. Le sugerimos marcarle directamente.',
           time: nowTime,
         },
       ]);
     } else if (action === 'faq_ans') {
       let resp = '';
       if (value === 'notaria') {
-        resp = '📜 *Gastos Notariales e Impuestos (ISAI):*\nEn compras inmobiliarias, los gastos notariales suelen representar entre el 5% y 7% del valor total de la propiedad (incluye escrituración, avalúo fiscal, derechos de registro y honorarios del notario).';
+        resp = '📜 *Gastos Notariales e Impuestos (ISAI):*\nEn compras inmobiliarias tramitadas con el Ing. Ramírez, los gastos notariales suelen representar entre el 5% y 7% del valor total de la propiedad (incluye escrituración, avalúo fiscal, derechos de registro y honorarios del notario).';
       } else if (value === 'credito') {
-        resp = '💳 *Créditos Aceptados:*\nTrabajamos con todos los bancos (Santander, BBVA, Banorte, Scotiabank), Infonavit Total, Cofinavit y Fovissste. Tramitamos tu precalificación en menos de 24 horas sin costo extra.';
+        resp = '💳 *Créditos Aceptados:*\nEl despacho del Ing. Ramírez trabaja con todos los bancos (Santander, BBVA, Banorte, Scotiabank), Infonavit Total, Cofinavit y Fovissste. Tramitamos su precalificación en menos de 24 horas sin costo extra.';
       } else if (value === 'comision') {
-        resp = '💼 *Comisión de Venta:*\nNuestra comisión estándar es del 4% al 5% a éxito (solo cobramos si vendemos). Incluye estudio de mercado, fotos profesionales, promoción en portales prémium y asesoría legal hasta la firma notarial.';
+        resp = '💼 *Comisión de Venta del Ing. Ramírez:*\nLa comisión estándar es del 4% al 5% a éxito (solo se cobra si se vende). Incluye estudio de mercado, fotos profesionales, promoción en portales prémium y asesoría legal completa hasta la firma notarial.';
       }
 
       setChatMessages((prev) => [
@@ -472,7 +472,7 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
           text: resp,
           time: nowTime,
           options: [
-            { label: '📅 Agendar llamada con Asesor', value: 'call', action: 'schedule_human' },
+            { label: '📅 Agendar llamada con el Ing. Ramírez', value: 'call', action: 'schedule_human' },
             { label: '❓ Otra duda frecuente', value: 'faq', action: 'faq_reset' },
           ],
         },
@@ -492,12 +492,12 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
         {
           id: `bot-${Date.now()}`,
           sender: 'bot',
-          text: `Con gusto agendamos tu cita para atender "${text}".\n\n¿Qué día y horario te queda mejor?`,
+          text: `Con gusto agendamos su cita con el Ing. Ramírez para atender "${text}".\n\n¿Qué día y horario prefiere?`,
           time: nowTime,
           options: [
             { label: '📅 Hoy por la tarde (5:00 PM)', value: 'hoy_tarde', action: 'finalize_buyer_apt', aptData: { type: 'cita_visita', time: '17:00' } },
             { label: '📅 Mañana por la mañana (11:00 AM)', value: 'manana_manana', action: 'finalize_buyer_apt', aptData: { type: 'cita_visita', time: '11:00' } },
-            { label: '📞 Solo llamada telefónica breve', value: 'llamada', action: 'finalize_buyer_apt', aptData: { type: 'llamada', time: '16:30' } },
+            { label: '📞 Llamada telefónica con el Ing. Ramírez', value: 'llamada', action: 'finalize_buyer_apt', aptData: { type: 'llamada', time: '16:30' } },
           ],
         },
       ]);
@@ -507,7 +507,7 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
         {
           id: `bot-${Date.now()}`,
           sender: 'bot',
-          text: 'Tenemos propiedades desde $1.8M hasta $15M MXN. ¿Qué rango de inversión tienes contemplado para enviarte el catálogo filtrado?',
+          text: 'El Ing. Ramírez cuenta con un inventario verificado desde $1.8M hasta $15M MXN. ¿Qué presupuesto de inversión tiene contemplado para enviarle el catálogo filtrado?',
           time: nowTime,
           options: [
             { label: 'Hasta $3.5M MXN', value: '3.5M', action: 'step_schedule' },
@@ -522,11 +522,11 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
         {
           id: `bot-${Date.now()}`,
           sender: 'bot',
-          text: `Recibido: "${text}". Un asesor especializado atenderá tu mensaje. Si deseas agilizar la atención, puedes seleccionar una de estas acciones inmediatas:`,
+          text: `Recibido: "${text}". El Ing. Ramírez o su equipo atenderá su mensaje de inmediato. Para coordinar atención prioritaria, seleccione una acción:`,
           time: nowTime,
           options: [
-            { label: '📅 Agendar Visita al Inmueble', value: 'visita', action: 'finalize_buyer_apt', aptData: { type: 'cita_visita', time: '17:00' } },
-            { label: '📞 Solicitar Llamada Telefónica', value: 'llamada', action: 'finalize_buyer_apt', aptData: { type: 'llamada', time: '16:00' } },
+            { label: '📅 Agendar Visita con Ing. Ramírez', value: 'visita', action: 'finalize_buyer_apt', aptData: { type: 'cita_visita', time: '17:00' } },
+            { label: '📞 Solicitar Llamada del Ing. Ramírez', value: 'llamada', action: 'finalize_buyer_apt', aptData: { type: 'llamada', time: '16:00' } },
             { label: '💬 Escribir al WhatsApp 775 128 0009', value: 'wa', action: 'finalize_buyer_apt', aptData: { type: 'seguimiento', time: '12:00' } },
           ],
         },
@@ -819,14 +819,14 @@ export const ChatbotAppointmentManager: React.FC<ChatbotAppointmentManagerProps>
                   <div>
                     <div className="flex items-center gap-2">
                       <h4 className="text-sm font-bold text-white">
-                        Asistente Inmobiliario 360°
+                        Asistente Virtual del Ing. Ramírez
                       </h4>
                       <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-400/30">
-                        En línea
+                        En línea 24/7
                       </span>
                     </div>
                     <p className="text-[11px] text-slate-300 font-mono">
-                      WhatsApp: +52 775 128 0009
+                      WhatsApp: +52 775 128 0009 | Asesoría Inmobiliaria
                     </p>
                   </div>
                 </div>

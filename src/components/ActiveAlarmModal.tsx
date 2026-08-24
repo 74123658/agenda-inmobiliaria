@@ -38,7 +38,7 @@ export const ActiveAlarmModal: React.FC<ActiveAlarmModalProps> = ({
     soundEngine.playAlarm(appointment.alarmSound || 'campana');
 
     // Announce via speech synth if supported
-    soundEngine.speakText(`Atención asesor: Cita programada con ${appointment.leadName}`);
+    soundEngine.speakText(`Atención Ing. Ramírez: Cita programada con ${appointment.leadName}`);
 
     // Pulse sound every 4.5 seconds for attention
     const interval = setInterval(() => {

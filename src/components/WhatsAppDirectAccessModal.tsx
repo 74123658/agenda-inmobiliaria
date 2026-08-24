@@ -26,7 +26,7 @@ export const WhatsAppDirectAccessModal: React.FC<WhatsAppDirectAccessModalProps>
   isOpen,
   onClose,
   defaultPhone = '7751280009',
-  advisorName = 'Asesor Inmobiliario 360°',
+  advisorName = 'Ing. Ramírez (Asesor Inmobiliario)',
 }) => {
   const rawPhone = defaultPhone;
   const cleanedPhone = cleanPhoneNumber(rawPhone); // 527751280009

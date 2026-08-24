@@ -83,9 +83,12 @@ export const Header: React.FC<HeaderProps> = ({
                   <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">
                     Tri-Color CRM
                   </span>
+                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-slate-900 text-amber-300 border border-slate-700 hidden sm:inline-flex items-center gap-1">
+                    👤 Ing. Ramírez
+                  </span>
                 </div>
                 <p className="text-xs text-slate-600 font-medium hidden sm:block">
-                  Control visual de llamadas, dueños, prospectos y cierres
+                  Despacho del Ing. Ramírez | Control visual de llamadas, dueños, prospectos y cierres
                 </p>
               </div>
             </div>

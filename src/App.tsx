@@ -53,6 +53,7 @@ import { WhatsAppDirectAccessModal } from './components/WhatsAppDirectAccessModa
 import { ChatbotAppointmentManager } from './components/ChatbotAppointmentManager';
 import { ActiveAlarmModal } from './components/ActiveAlarmModal';
 import { UserGuide } from './components/UserGuide';
+import { CaratulaGuiaTotal } from './components/CaratulaGuiaTotal';
 import { MessageCircle } from 'lucide-react';
 
 export default function App() {
@@ -348,6 +349,34 @@ export default function App() {
       {/* Main Container */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
         
+        {/* CARÁTULA Y GUÍA TOTAL DE OPERACIÓN 360° */}
+        <CaratulaGuiaTotal
+          onNavigateTab={setCurrentTab}
+          onOpenQuickAdd={() => {
+            setEditingLead(null);
+            setIsQuickAddOpen(true);
+          }}
+          onOpenDirectWhatsApp={() => setIsDirectWhatsAppOpen(true)}
+          onTestAlarmSample={() => {
+            const sampleApt: AppointmentRecord = appointments[0] || {
+              id: 'test-sample-alarm',
+              leadName: 'Ing. Carlos Mendoza (Cliente Demostración)',
+              leadPhone: '7751280009',
+              leadType: 'prospecto',
+              type: 'llamada',
+              title: 'Cierre y Firma de Exclusiva Comercial',
+              date: new Date().toISOString().split('T')[0],
+              time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+              status: 'pendiente',
+              alarmEnabled: true,
+              alarmSound: 'campana',
+              alarmOffsetMinutes: 0,
+              createdAt: new Date().toISOString(),
+            };
+            setActiveAlarmAppointment(sampleApt);
+          }}
+        />
+
         {/* TAB 1: AGENDA & LEADS 360° */}
         {currentTab === 'agenda' && (
           <div className="space-y-6">
